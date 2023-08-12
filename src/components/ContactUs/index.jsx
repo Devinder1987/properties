@@ -11,7 +11,7 @@ export default function ContactUs() {
         <a
           target='_blank'
           title='WhatsApp'
-          href='https://api.whatsapp.com/send?phone=+8586986101&amp;text=Hi, I would like to get more information about new projects in Gurgaon. I am intrested in: <location> <Budget>'
+          href='https://api.whatsapp.com/send?phone=+918586986101&amp;text=Hi, I would like to get more information about new projects in Gurgaon. I am intrested in: <location> <Budget>'
         >
           <FontAwesomeIcon
             icon={faWhatsapp}
