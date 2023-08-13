@@ -5,7 +5,8 @@ export default function AboutUs() {
       <p>
         We value your hard earned money. We work very hard to bring the best
         deal for you. We deal in all type of properties. We have a big network
-        in NCR which help you to find find best property across NCR.
+        in NCR which help you to find find best property across NCR. We are here
+        to help you.
       </p>
     </div>
   );
