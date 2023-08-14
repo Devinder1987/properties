@@ -4,7 +4,7 @@ const HeroBanner = () => {
   return (
     <section className='hero'>
       <Image
-        src='/HouseBanner.jpg'
+        src='/images/HouseBanner.jpg'
         alt='Hero image'
         width={0}
         height={0}
