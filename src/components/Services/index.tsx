@@ -1,43 +1,40 @@
-const serviceData = [
-  {
-    name: 'Home Loan',
-    description:
-      '<b>You get get upto 85% loan</b><ul><li>benifit 1</li><li>benifit 1</li></ul>',
-    image: 'image-url',
-  },
-  {
-    name: 'Site Visit',
-    description: 'There is absolutly free site visits.',
-    image: 'image-url',
-  },
-  {
-    name: 'Home Loan 2',
-    description: 'You get get upto 85% loan',
-    image: 'image-url',
-  },
-  {
-    name: 'Site Visit 2',
-    description: 'There is absolutly free site visits.',
-    image: 'image-url',
-  },
-];
+import Image from 'next/image';
+import Link from 'next/link';
+import { serviceData } from '../../app/projectData';
 
 export default function Services() {
   return (
-    <div className='w-full p-2 bg-white'>
-      {serviceData.map((val) => {
-        return (
-          <div key={val.name} className='m-2 bg-slate-100 rounded'>
-            <h1 className='text-2xl font-bold p-2 rounded-t bg-gradient-to-r from-purple-200 to-pink-200'>
-              {val.name}
-            </h1>
+    <div className='p-2 m-2 shadow-xl rounded-md bg-slate-50'>
+      <div className='flex flex-wrap justify-around'>
+        {serviceData.slice(0, 4).map((val) => {
+          return (
             <div
-              className='p-2'
-              dangerouslySetInnerHTML={{ __html: val.description }}
-            />
-          </div>
-        );
-      })}
+              key={val.name}
+              className='m-2 p-2 w-[40vw] text-center bg-slate-100 rounded'
+            >
+              <div className='mx-2 text-center'>
+                <Image
+                  src={val.icon}
+                  width={0}
+                  height={0}
+                  alt={val.name}
+                  sizes='1rem'
+                  style={{ width: '2rem', height: '2rem', display: 'initial' }}
+                />
+              </div>
+              <h1 className='text-md'>{val.name}</h1>
+            </div>
+          );
+        })}
+      </div>
+      <div className='text-center p-3'>
+        <Link
+          href={`/services`}
+          className='py-2 px-4 bg-black text-white rounded'
+        >
+          View all
+        </Link>
+      </div>
     </div>
   );
 }

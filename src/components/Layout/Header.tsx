@@ -22,7 +22,7 @@ export default function Header() {
       </div>
       <div className='flex items-center'>Properties</div>
       <div className='flex'>
-        <a className='flex' href='tel:9971293694'>
+        <a className='flex' href='tel:+918586986101'>
           <FontAwesomeIcon
             icon={faHeadset}
             style={{

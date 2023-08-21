@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import projectData from '../../app/projectData';
+import { projectData } from '../../app/projectData';
 import lakhCRconversion from '../../utils/lakhCRconversion';
 
 const heading = 'Best Project for investment.';
@@ -8,7 +8,7 @@ const category = 'Flats';
 
 export default function Carousel() {
   return (
-    <div className='text-slate-950'>
+    <div className='text-slate-950 p-2 m-2 shadow-md bg-slate-50'>
       <div className='flex py-2 justify-between'>
         <div className='p-3 text-xl font-medium'> {heading}</div>
         <Link

@@ -1,4 +1,4 @@
-const projectData = [
+export const projectData = [
   {
     id: 1,
     images: ['/images/House1.jpg', '/images/House2.jpg', '/images/House3.jpg'],
@@ -109,4 +109,71 @@ const projectData = [
   },
 ];
 
-export default projectData;
+export const serviceData = [
+  {
+    id: 1,
+    name: 'Home Loan',
+    icon: '/icons/indian-rupee-sign-solid.svg',
+    description:
+      '<b>You get get upto 85% loan</b><ul><li>benifit 1</li><li>benifit 1</li></ul>',
+    image: 'image-url',
+  },
+  {
+    id: 2,
+    name: 'Site Visit',
+    icon: '/icons/location-pin-solid.svg',
+    description: 'There is absolutly free site visits.',
+    image: 'image-url',
+  },
+  {
+    id: 3,
+    name: 'Home Interior',
+    icon: '/icons/paint-roller-solid.svg',
+    description: 'You get get upto 85% loan',
+    image: 'image-url',
+  },
+  {
+    id: 4,
+    name: 'Properties Managment',
+    icon: '/icons/tree.svg',
+    description: 'There is absolutly free site visits.',
+    image: 'image-url',
+  },
+  {
+    id: 5,
+    name: 'Housing Premium',
+    icon: '/icons/tree.svg',
+    description: 'There is absolutly free site visits.',
+    image: 'image-url',
+  },
+  {
+    id: 6,
+    name: 'Fixed Deposit',
+    icon: '/icons/tree.svg',
+    description: 'There is absolutly free site visits.',
+    image: 'image-url',
+  },
+];
+
+export const filterData = [
+  {
+    id: 1,
+    title: 'Type',
+    values: ['Plots', 'Vila', 'Flat'],
+  },
+  {
+    id: 2,
+    title: 'Price',
+    values: ['min', 'max'],
+  },
+  {
+    id: 3,
+    title: 'Area',
+    values: ['min', 'max'],
+  },
+  {
+    id: 4,
+    title: 'Location',
+    values: ['min', 'max'],
+  },
+];

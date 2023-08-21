@@ -7,7 +7,7 @@ export default function ContactUs() {
       <h1 className='text-xl font-semibold mb-2 border-b-2'>Contact Us</h1>
       <p>We are just a call or whatsapp message away.</p>
       <div className='flex py-2 text-lg'>
-        <a href='tel:9971293694'>9971293694 </a>{' '}
+        <a href='tel:+918586986101'>+918586986101</a>{' '}
         <a
           target='_blank'
           title='WhatsApp'
