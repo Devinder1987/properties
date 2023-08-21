@@ -63,6 +63,7 @@ const FilterComponent: React.FC = () => {
       <h3 className='border-b mb-4 text-lg'>Filters</h3>
       {filterData.map((filter) => (
         <div key={filter.id} className='h-[3rem]'>
+          <h4>{filter.title}</h4>
           {filter.values.map((value) => (
             <label
               key={value}
