@@ -3,7 +3,7 @@
 import React from 'react';
 import Layout from '../../../components/Layout';
 import ProjectTiles from './ProjectTiles';
-import projectData from '../../projectData';
+import { projectData } from '../../projectData';
 
 export default function ProductListsPage({ params }) {
   return (
