@@ -1,7 +1,7 @@
 export const projectData = [
   {
     id: 1,
-    images: ['/images/House1.jpg', '/images/House2.jpg', '/images/House3.jpg'],
+    images: ['https://i.ibb.co/p3MMVZD/House1.jpg', '/images/House2.jpg', '/images/House3.jpg'],
     title: 'Hari Nivas',
     minCost: 159.5,
     maxCost: 280.3,
@@ -36,7 +36,7 @@ export const projectData = [
     ],
   },
   {
-    id: 2,
+    id: '2',
     images: ['/images/House2.jpg', '/images/House2.jpg', '/images/House3.jpg'],
     title: 'Sai Bhawan',
     minCost: 19.5,
