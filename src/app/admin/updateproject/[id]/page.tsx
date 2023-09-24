@@ -78,15 +78,12 @@ export default function EditProject({ params }: { params: { id: string } }) {
         setSuccessMsg('');
         setErrorMsg(`Error! ${error}`);
       });
-    console.log(formData);
   };
   const arrayOfObjects = convertObjectToArray(inputFields);
   console.log('Dev--->', JSON.stringify(arrayOfObjects));
   return (
     <Layout>
-      <div className='underline text-2xl'>
-        Edit Project: {projectData.title}
-      </div>
+      <div className='underline text-2xl'>Edit Project</div>
       <form onSubmit={handleSubmit}>
         <ul className='flex flex-col'>
           {arrayOfObjects.map((val) => (
