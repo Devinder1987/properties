@@ -3,40 +3,44 @@ import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import Layout from '../../../../components/Layout';
 const inputFields = {
-  show: String,
-  images: String,
-  title: String,
-  minCost: Number,
-  maxCost: Number,
-  buildingType: String,
-  buildingSubType: String,
-  minArea: Number,
-  maxArea: Number,
-  unit: String,
-  numberOfUnits: Number,
-  address_locality: String,
-  address_city: String,
-  possessionDate: String,
-  features: String,
-  builder_name: String,
-  builder_about: String,
-  project_area: Number,
-  project_area_unit: String,
-  project_youtubeLink: String,
-  project_amenities: String,
-  project_location_latitude: Number,
-  project_location_longitude: Number,
+  show: 'String',
+  images: 'String',
+  title: 'String',
+  minCost: 'Number',
+  maxCost: 'Number',
+  buildingType: 'String',
+  buildingSubType: 'String',
+  minArea: 'Number',
+  maxArea: 'Number',
+  unit: 'String',
+  numberOfUnits: 'Number',
+  address_locality: 'String',
+  address_city: 'String',
+  possessionDate: 'String',
+  features: 'String',
+  builder_name: 'String',
+  builder_about: 'String',
+  project_area: 'Number',
+  project_area_unit: 'String',
+  project_youtubeLink: 'String',
+  project_amenities: 'String',
+  project_location_latitude: 'Number',
+  project_location_longitude: 'Number',
 };
-function convertObjectToArray(
-  inputObj: { [s: string]: unknown } | ArrayLike<unknown>
-) {
+interface ObjectType {
+  field: string;
+  type: string;
+}
+type ProjectDataType = Record<string, any>;
+function convertObjectToArray(inputObj: { [s: string]: string }): ObjectType[] {
   return Object.entries(inputObj).map(([field, type]) => ({
     field,
-    type: typeof type === 'function' ? type.name : type,
+    type,
   }));
 }
+
 export default function EditProject({ params }: { params: { id: string } }) {
-  const [projectData, setProjectData] = useState({});
+  const [projectData, setProjectData] = useState<ProjectDataType>({});
   const [formData, setFormData] = useState({});
   const [successMsg, setSuccessMsg] = useState('');
   const [errorMsg, setErrorMsg] = useState('');
@@ -80,7 +84,6 @@ export default function EditProject({ params }: { params: { id: string } }) {
       });
   };
   const arrayOfObjects = convertObjectToArray(inputFields);
-  console.log('Dev--->', JSON.stringify(arrayOfObjects));
   return (
     <Layout>
       <div className='underline text-2xl'>Edit Project</div>
