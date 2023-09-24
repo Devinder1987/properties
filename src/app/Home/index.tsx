@@ -1,9 +1,11 @@
+import Link from 'next/link';
 import AboutUs from '../../components/AboutUs';
 import ContactUs from '../../components/ContactUs';
 import HeroBanner from '../../components/HeroBanner';
 import Filter from '../../components/Filter';
 import Services from '../../components/Services';
 import Carousel from '../../components/Carousel';
+import Partner from '../../components/Partner';
 
 export default function Home() {
   return (
@@ -12,8 +14,16 @@ export default function Home() {
       <Filter />
       <Services />
       <Carousel />
+      <Partner />
       <div>
-        More Sections like-{' '}
+        <Link href='/admin/showprojects'>
+          <div className='my-4 w-full py-2 px-4 bg-black text-center text-white rounded'>
+            Project Admin page
+          </div>
+        </Link>
+      </div>
+      <div>
+        More Sections like-
         <ul>
           <li>Ready to move</li>
           <li>Luxary appartments</li>
@@ -23,7 +33,6 @@ export default function Home() {
       <hr />
       <p>Projects Story Telling</p>
       <hr />
-      <p>Patners</p>
       <AboutUs />
       <ContactUs />
       <div>FAQ</div>

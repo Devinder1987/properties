@@ -1,7 +1,11 @@
 export const projectData = [
   {
     id: 1,
-    images: ['https://i.ibb.co/p3MMVZD/House1.jpg', '/images/House2.jpg', '/images/House3.jpg'],
+    images: [
+      'https://i.ibb.co/p3MMVZD/House1.jpg',
+      '/images/House2.jpg',
+      '/images/House3.jpg',
+    ],
     title: 'Hari Nivas',
     minCost: 159.5,
     maxCost: 280.3,
@@ -175,5 +179,36 @@ export const filterData = [
     id: 4,
     title: 'Location',
     values: ['min', 'max'],
+  },
+];
+
+export const partnerData = [
+  {
+    id: 1,
+    name: 'DLF',
+    logo: '/logos/DLF_logo.png',
+    description: '<b>DLF is the oldest builder and known to build. </b>',
+    image: 'image-url',
+  },
+  {
+    id: 2,
+    name: 'M3M',
+    logo: '/logos/M3M_logo.png',
+    description: '<b>M3M is the oldest builder and known to build. </b>',
+    image: 'image-url',
+  },
+  {
+    id: 3,
+    name: 'Wirral',
+    logo: '/logos/Wirral_logo.jpg',
+    description: '<b>Wirral is the oldest builder and known to build. </b>',
+    image: 'image-url',
+  },
+  {
+    id: 4,
+    name: 'Virat Builder and Properties',
+    logo: '/logos/Wirral_logo.jpg',
+    description: '<b>Wirral is the oldest builder and known to build. </b>',
+    image: 'image-url',
   },
 ];
