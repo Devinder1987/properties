@@ -46,6 +46,7 @@ export default function EditProject({ params }: { params: { id: string } }) {
   const [errorMsg, setErrorMsg] = useState('');
   useEffect(() => {
     fetchProjects();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   function fetchProjects() {
     fetch(`/api/projects?id=${params.id}`, {

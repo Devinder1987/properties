@@ -11,6 +11,7 @@ function ShowProjects() {
     if (projectData.length == 0) {
       fetchProjects();
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   function fetchProjects() {
     fetch('/api/projects', {
@@ -82,8 +83,7 @@ function ShowProjects() {
                     {project.address_city}
                   </div>
                   <div>
-                    <strong>Show:</strong> {project.address_locality},
-                    {project.show}
+                    <strong>Show:</strong> {project.show}
                   </div>
                   <Link href={`/admin/updateproject/${project._id}`}>
                     <div className='my-4 w-full py-2 px-4 bg-black text-center text-white rounded'>
