@@ -6,11 +6,11 @@ export default function Services() {
   return (
     <div className='p-2 m-2 shadow-xl rounded-md bg-slate-50'>
       <div className='flex flex-wrap justify-around'>
-        {serviceData.slice(0, 4).map((val) => {
+        {serviceData.slice(0, 6).map((val) => {
           return (
             <div
               key={val.name}
-              className='m-2 p-2 w-[40vw] text-center bg-slate-100 rounded'
+              className='m-2 p-2 w-[40vw] max-w-[186px] text-center bg-slate-100 rounded'
             >
               <div className='mx-2 text-center'>
                 <Image

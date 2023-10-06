@@ -1,6 +1,6 @@
 export default function AboutUs() {
   return (
-    <div className='p-4 m-2 mt-4 shadow-xl rounded-md bg-slate-50'>
+    <div className='p-4 m-2 mt-4 shadow-xl rounded-md bg-slate-50  w-[98vw] max-w-[1300px]'>
       <h1 className='text-xl font-semibold mb-2 border-b-2'>About Us</h1>
       <p>
         We value your hard earned money. We work very hard to bring the best

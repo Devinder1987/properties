@@ -9,23 +9,23 @@ const category = 'Flats';
 
 export default function Carousel() {
   return (
-    <div className='text-slate-950 p-2 m-2 shadow-md bg-slate-50'>
-      <div className='flex py-2 justify-between'>
-        <div className='p-3 text-xl font-medium'> {heading}</div>
+    <div className='text-slate-950 p-2 m-2 shadow-md bg-slate-50 w-[98vw] max-w-[1300px] rounded-md'>
+      <div className='flex justify-between border-b-2'>
+        <div className='px-3 text-xl font-medium'> {heading}</div>
         <Link
           href={`/projectList/${category}`}
-          className='p-3 self-end text-blue-800 underline'
+          className='px-3 self-end text-blue-800 underline'
         >
           See All
         </Link>
       </div>
 
-      <div className='flex w-screen overflow-scroll'>
+      <div className='flex w-full overflow-scroll'>
         {projectData.map((val) => (
           <Link
             href={`/project/${val.id}`}
             key={val.id}
-            className='p-4 min-w-[70vw]'
+            className='p-4 w-[70vw] max-w-[240px]'
           >
             <Image
               src={val.images[0]}

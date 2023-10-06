@@ -60,19 +60,15 @@ const ProjectTiles: React.FC<ProjectTiilsProps> = ({ project }) => {
     return cost + ' lakh';
   };
   return (
-    <div className='p-4 m-2 mt-4 shadow-xl rounded-md bg-slate-50'>
-      <Link
-        href={`/project/${project.id}`}
-        key={project.id}
-        className='py-2 min-w-[95vw]'
-      >
+    <div className='p-4 m-2 mt-4 md:min-w-[46%] shadow-xl rounded-md bg-slate-50'>
+      <Link href={`/project/${project.id}`} key={project.id} className='py-2'>
         <Image
           src={project.images[0]}
           alt={project.title}
           width={0}
           height={0}
           sizes='100vw'
-          style={{ width: '95vw', height: '220px' }} // optional
+          style={{ width: '100%', height: '280px' }} // optional
         />
         <h3 className='text-lg font-medium overflow-hidden whitespace-nowrap text-ellipsis'>
           {project.title}

@@ -8,10 +8,16 @@ import { projectData } from '../../projectData';
 export default function ProductListsPage({ params }) {
   return (
     <Layout>
-      <p className='text-xl font-semibold mb-2 border-b-2'>{params.category}</p>
-      {projectData.map((project) => (
-        <ProjectTiles key={project.id} project={project} />
-      ))}
+      <div className='flex flex-col max-w-[1300px]'>
+        <p className='text-xl font-semibold mb-2 border-b-2'>
+          {params.category}
+        </p>
+        <div className='flex flex-col md:flex-row flex-wrap'>
+          {projectData.map((project) => (
+            <ProjectTiles key={project.id} project={project} />
+          ))}
+        </div>
+      </div>
     </Layout>
   );
 }

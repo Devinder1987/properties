@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 const HeroBanner = () => {
   return (
-    <section className='hero'>
+    <section className='max-h-[340px] overflow-y-hidden'>
       <Image
         src='/images/HouseBanner.jpg'
         alt='Hero image'
