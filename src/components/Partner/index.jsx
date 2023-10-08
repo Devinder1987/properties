@@ -18,7 +18,7 @@ export default function Partner() {
                   width={0}
                   height={0}
                   alt={val.name}
-                  sizes='1rem'
+                  sizes='250px'
                   style={{
                     width: '150px',
                     height: '120px',

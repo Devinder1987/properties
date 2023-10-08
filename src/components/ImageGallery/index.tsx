@@ -28,11 +28,11 @@ const ProductDetails: React.FC<ProductDetailsProps> = ({ images = [] }) => {
             width={0}
             height={0}
             sizes='100vw'
-            style={{ width: '100vw', height: '16rem' }}
+            className='w-full h-[340px] lg:h-[550px]'
           />
         </div>
         <div className='col-span-2'>
-          <div className='flex overflow-scroll w-full'>
+          <div id='ImageGallery' className='flex overflow-x-scroll w-full'>
             {images.map((imageUrl, index) => (
               <Image
                 key={index}

@@ -1,5 +1,5 @@
-import connectMongoDB from './mongodb';
-import Project from './projectSchema';
+import connectMongoDB from '../utils/mongodb';
+import Project from '../utils/projectSchema';
 import { NextResponse } from 'next/server';
 
 export async function POST(request) {

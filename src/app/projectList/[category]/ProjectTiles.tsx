@@ -1,53 +1,33 @@
 import Image from 'next/image';
 import Link from 'next/link';
-
-interface BuildingLocation {
-  latitude: string;
-  longitude: string;
-}
-
-interface Amenity {
-  icon: string;
-  title: string;
-}
-
-interface PriceTrend {
-  year: number;
-  quarter: number;
-  price: number;
-}
-
-interface Builder {
-  builderName: string;
-  about: string;
-}
-
-interface Project {
-  area: string;
-  unit: string;
-  youtubeLink: string;
-  amenities: Amenity[];
-  location: BuildingLocation;
-}
-
 interface ProjectData {
-  id: number;
-  images: string[];
+  id: string;
+  show: string;
+  images: string;
   title: string;
   minCost: number;
   maxCost: number;
-  buildingType: string[];
+  buildingType: string;
   buildingSubType: string;
   minArea: number;
   maxArea: number;
   unit: string;
   numberOfUnits: number;
-  address: string;
+  address_locality: string;
+  address_city: string;
   possessionDate: string;
   features: string;
-  builder: Builder;
-  project: Project;
-  priceTrend: PriceTrend[];
+  builder_name: string;
+  builder_about: string;
+  project_area: number;
+  project_area_unit: string;
+  project_youtubeLink: string;
+  project_amenities: string;
+  project_location_latitude: number;
+  project_location_longitude: number;
+  priceTrend: string;
+  createdAt: Date;
+  updatedAt: Date;
 }
 interface ProjectTiilsProps {
   project: ProjectData;
@@ -63,7 +43,7 @@ const ProjectTiles: React.FC<ProjectTiilsProps> = ({ project }) => {
     <div className='p-4 m-2 mt-4 md:min-w-[46%] shadow-xl rounded-md bg-slate-50'>
       <Link href={`/project/${project.id}`} key={project.id} className='py-2'>
         <Image
-          src={project.images[0]}
+          src={project.images.split(',')[0]}
           alt={project.title}
           width={0}
           height={0}
@@ -74,7 +54,7 @@ const ProjectTiles: React.FC<ProjectTiilsProps> = ({ project }) => {
           {project.title}
         </h3>
         <h2 className='text-sm font-light overflow-hidden whitespace-nowrap text-ellipsis'>
-          {project.address}
+          {project.address_locality}, {project.address_city}
         </h2>
         <h2 className='text-sm font-normal overflow-hidden whitespace-nowrap text-ellipsis'>
           {project.buildingSubType}

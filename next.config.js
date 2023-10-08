@@ -8,6 +8,12 @@ const nextConfig = {
         port: '',
         pathname: '/p3MMVZD/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'www.m3mprojects.in',
+        port: '',
+        pathname: '/images/**',
+      },
     ],
   },
 };
